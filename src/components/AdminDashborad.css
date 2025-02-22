@@ -1,0 +1,197 @@
+/* 🌟 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🔹 Fixed Navbar */
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admin-navbar .admin-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.admin-navbar .logout-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.admin-navbar .logout-button:hover {
+  background: darkred;
+}
+
+/* 🔹 Content Layout */
+.admin-dashboard {
+  padding-top: 90px; /* To prevent content from being hidden behind navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🔹 Admin Panels Grid */
+.admin-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+/* 🔹 Panel Styling */
+.election-panel,
+.party-panel,
+.party-list,
+.graph-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 250px;
+}
+
+/* 🔹 Election Buttons */
+.start-button,
+.end-button,
+.party-panel button {
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.start-button {
+  background: green;
+  color: white;
+}
+
+.start-button:disabled {
+  background: grey;
+}
+
+.end-button {
+  background: red;
+  color: white;
+}
+
+.end-button:disabled {
+  background: grey;
+}
+
+.party-panel button {
+  background: #007bff;
+  color: white;
+}
+
+.party-panel button:hover {
+  background: #0056b3;
+}
+
+/* 🔹 Party Panel */
+.party-panel input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 🔹 Party List */
+.party-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.party-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.party-list img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* 🔹 Election Results Styling */
+/* 🔹 Election Results Styling */
+.graph-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.election-results-chart {
+  width: 400px;
+  height: 300px;
+}
+
+/* 🔹 Ensure X-axis labels are readable */
+
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .admin-container {
+    grid-template-columns: 1fr;
+  }
+}

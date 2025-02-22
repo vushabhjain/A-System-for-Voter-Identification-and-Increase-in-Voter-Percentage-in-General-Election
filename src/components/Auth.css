@@ -1,0 +1,108 @@
+/* Center the form on the page */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #8e44ad);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Box */
+.auth-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.auth-box:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+.auth-box h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Input Fields */
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.auth-box input:focus {
+  border-color: #4a90e2;
+}
+
+/* Buttons */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-box button:hover {
+  background: #357bd8;
+}
+
+/* OTP Section */
+.otp-section {
+  margin-top: 15px;
+}
+
+/* Message Text */
+.message {
+  color: rgb(20, 247, 4);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Register/Login Link */
+.switch-auth {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-auth a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-input select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+
+.switch-auth a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .auth-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
